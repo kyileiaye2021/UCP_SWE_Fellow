@@ -54,16 +54,6 @@ def max_mean(arr, k):
         max_mean_val = max(max_mean_val, curr_mean)
         
     return max_mean_val
-
-# def main():
-#     arr = [4, 5, -3, 2, 6, 1]
-#     k = 2
-#     print(max_mean(arr, k))
-    
-#     arr = [4, 5, -3, 2, 6, 1]
-#     k = 5
-#     print(max_mean(arr, k))
-    
     
 # main()
 arr = [4, 5, -3, 2, 6, 1]
@@ -82,4 +72,6 @@ arr = [1, 1, 1, 1, -1, -1, 2, -1, -1, 6]
 k = 5
 print(max_mean(arr,k)) #1
 
-# TIme ~ 30mins
+# Time Complexity - O(n)
+# Space Complexity - O(1)
+# TIme taken ~ 30mins
