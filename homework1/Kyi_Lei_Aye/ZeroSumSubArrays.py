@@ -83,3 +83,6 @@ print(zero_sum_subarray(input)) #2
 # Time complexity - O(n)
 # Space complexity - O(n)
 # Time taken ~ 1hr
+
+# In this problem, I learned that we can use hashmap and prefix sum to avoid computing prev window sum.
+# Also, i learned that the subarray between the same prefix sum is 0.
