@@ -28,7 +28,7 @@ Output: False
 
 # dictionaries won't work because they didn't check orders.
 
-# Two pointer approach
+# Two pointer with two arrays/strings approach
 # two pointers; each pointing and iterating thru each str
 # iterating until either of the str is exhausted
 #   check if the l pointer pointing to the '#'
