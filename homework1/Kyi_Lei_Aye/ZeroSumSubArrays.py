@@ -58,13 +58,14 @@ def zero_sum_subarray(arr):
         if curr_sum == 0:
             counter += 1
         if curr_sum in freq:
-            freq[curr_sum] += 1
+            # freq[curr_sum] += 1
+            counter += 1
         else:
             freq[curr_sum] = 1
     
-    for prefix_sum in freq:
-        if freq[prefix_sum] > 1:
-            counter += 1
+    # for prefix_sum in freq:
+    #     if freq[prefix_sum] > 1:
+    #         counter += 1
             
     return counter
 
