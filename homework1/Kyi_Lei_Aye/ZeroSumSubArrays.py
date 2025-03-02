@@ -30,8 +30,9 @@ Output: 2
 # output - 2
 
 # Brute Approach (Nested loop to count the num of sub arrays that add up to 0- O(n^2))
-# sliding window with variable size\
+# sliding window with variable size
     
+# One directional running computation/total
 # prefix sum and hashmap
 # hashmap: {prefix : freq}
 # if prefix sum counts more than 1 -> the subarray between that two prefix sum add up to 0

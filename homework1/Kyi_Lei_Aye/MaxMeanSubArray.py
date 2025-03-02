@@ -29,7 +29,7 @@ Output: 1
 # output: 1
 
 # Brute Force Approach (nested loop - O(n^k))
-# Sliding Window with size k(O(n))
+# Sliding Window with size k - (O(n))
 
 # first operate on the first k ele and find the max mean in first k ele
 # itereate over the list from 2nd ele to 2nd to last ele

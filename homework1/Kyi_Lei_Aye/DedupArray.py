@@ -31,7 +31,7 @@ Modified Array: [1, 3, 4, 8, 10, 12]
 # output: [0]
 
 # brute force - create another list and put unique elements in the list and at the end append -1s for the remaining elements [O(n) time and O(n) space]
-# two pointer (l, r)
+# Two pointer with reset/ catch up (l, r)
 # first both pointing to the second elements in the list 
 # l will represent index of unique elements
 # r will iterate thru elements in the list
