@@ -201,11 +201,12 @@ def reverseHelper(head, prev):
     # return reverseHelper(head.next, curr node)
     
     if not head: # base case
-        return head
+        return prev
     
+    next_node = head.next
     curr = head
     curr.next = prev
-    return reverseHelper(head.next, curr)
+    return reverseHelper(next_node, curr)
 
 def reverseRecursive(head):
     return reverseHelper(head, None) # call helper function
@@ -222,21 +223,35 @@ def print_list(head):
 def main():
     n = Node(2) # 2
     loc = n
+    print("Inserting after node 2")
     n = insertAfter(n,3,loc) # 2 -> 3
     print_list(n)
 
+    print("Inserting before node 2")
     n = insertBefore(n,1,loc) # 1 -> 2 -> 3
     print_list(n)
     
+    print("Inserting at the back of the list")
     n = insertAtBack(n,4) # 1 -> 2 -> 3 -> 4
-    print_list(n) # 1 -> 2 -> 3 -> 4
+    print_list(n)
     
+    print("Reversing the list iteratively")
+    n = reverseIterative(n)
+    print_list(n)
+    
+    print("Reversing the list recursively")
+    n = reverseRecursive(n)
+    print_list(n)
+    
+    print("Deleting first node")
     n = deleteFront(n) # 2 -> 3 -> 4
     print_list(n)
     
+    print("Deleting last node")
     n = deleteBack(n) # 2 -> 3
     print_list(n)
     
+    print("Deleting a specific node")
     loc = loc.next
     n = deleteNode(n, loc) # 2
     print_list(n) # 2
