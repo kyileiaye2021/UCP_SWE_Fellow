@@ -1,9 +1,6 @@
-# class Stack {
-#     int top() // returns the top item in the stack. O(1) time.
-#     void push(int x) // adds x to the top of the stack. O(1) time.
-#     int pop() // removes and returns the top item in the stack. O(1) time.
-#     bool isEmpty() // returns a boolean indicating whether the stack is empty. O(1) time.
-# }
+# Uber Career Prep 
+# Homework 2
+# Problem 5 - stack
 
 class Node:
     def __init__(self, data):
@@ -34,10 +31,18 @@ class Stack:
     
     # removes and returns the top item in the stack. O(1) time.
     def pop(self):
-        second_to_last_node = self.tail.prev
-        second_to_last_node.next = None
-        self.tail = second_to_last_node
-        return second_to_last_node.data
+        if not self.head:
+            return None
+        
+        removed_node = self.tail
+        if self.head == self.tail:
+            self.head = self.tail = None
+        
+        else:
+            second_to_last_node = self.tail.prev
+            second_to_last_node.next = None
+            self.tail = second_to_last_node
+        return removed_node.data
     
     def isEmpty(self):
         return (not self.head and not self.tail)
@@ -60,7 +65,7 @@ def main():
    
     print(stack.isEmpty())# False
     
-    print(stack.pop()) # 10
+    print(stack.pop()) # 20
     stack.print_list() #10
 
 if __name__ == "__main__":

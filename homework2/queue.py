@@ -31,11 +31,18 @@ class queue:
     
     # removes and returns the first item in the queue. O(1) time.
     def dequeue(self):
-        first_node = self.head
-        second_node = first_node.next
-        self.head = second_node
-        second_node.prev = None
-        return first_node.data
+        if not self.head:
+            return None
+        
+        removed_node = self.head
+        if self.head == self.tail:
+            self.head = self.tail = None
+        
+        else:
+            second_node = removed_node.next
+            self.head = second_node
+            second_node.prev = None
+        return removed_node.data
     
     # returns a boolean indicating whether the queue is empty. O(1) time.
     def isEmpty(self):
@@ -65,7 +72,7 @@ def main():
     q.print_list() # 2 -> 3
     q.peek() # 3
     
-    q.dequeue()
+    print(q.dequeue()) # 2
     q.print_list() # 3
 
 if __name__ == '__main__':
