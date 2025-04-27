@@ -100,3 +100,7 @@ def main():
     
 if __name__ == "__main__":
     main()
+
+# Time - ~20mins
+# Time complexity - O(n)
+# Space complexity - O(n)
