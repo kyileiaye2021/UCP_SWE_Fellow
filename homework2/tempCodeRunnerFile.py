@@ -1,1 +1,1 @@
-print_list(f"List: {list1}")
+list1 = DisconnectCycle(list1)
