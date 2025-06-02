@@ -39,14 +39,29 @@ class Node:
 def FloorInBST_helper(root, max_val, target):
     # base case
     if not root:
-        return float('-inf')
+        return max_val
     
-    if root.data <= target:
-        max_val = max(max_val, root.data)
+    # check if the target val is greater than the curr
+    # go to the right
+    if root.data == target:
+        return root.data
     
-    left = FloorInBST_helper(root.left, max_val, target)
-    right = FloorInBST_helper(root.right, max_val, target)
-    return max(left, right, max_val)
+    elif root.data < target:
+        max_val = root.data
+        return FloorInBST_helper(root.right, max_val, target)
+    
+    else:
+        return FloorInBST_helper(root.left, max_val, target)
+        
+    
+    # else: go to the left
+    
+    # if root.data <= target:
+    #     max_val = max(max_val, root.data)
+    
+    # left = FloorInBST_helper(root.left, max_val, target)
+    # right = FloorInBST_helper(root.right, max_val, target)
+    # return max(left, right, max_val)
 
 def FloorInBST(root, target):
     if not root:
