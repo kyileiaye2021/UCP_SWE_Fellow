@@ -43,6 +43,8 @@ class Heap:
     
     # retrieving the smallest element in the heap
     def top(self):
+        if not self.arr:
+            return -1 
         return self.arr[0] # return the min element in the arr
     
     # inserting the element in the heap
