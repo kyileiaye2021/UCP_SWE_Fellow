@@ -33,9 +33,10 @@ Output: ["0", "1", "10", "11", "100", "101", "110", "111", "1000", "1001"]
 #   for each ele
 #      need a deque
 #       - divide until the remainder is 1
-#       - in each division, add the remainder from the front of the deque
+#       - in each division, concat the remainder to the string
+#       - reverse the string
 #       - after creating str, add it to the res list
-from collections import deque
+
 def k_binary_nums(k):
     res = []
     
