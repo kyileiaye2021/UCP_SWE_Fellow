@@ -1,0 +1,1 @@
+r_child_idx < len(self.arr) 
