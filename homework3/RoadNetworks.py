@@ -100,7 +100,7 @@ def main():
 if __name__ == '__main__':
     main()
     
-# Time complexity - O(n) if in the worst case, every town is connected to each other
-# Space complexity - O(n) 
+# Time complexity - O(v + e) if in the worst case, every town is connected to each other
+# Space complexity - O(v + e) 
 # time taken - ~1 hr
 # I finished brainstorming and most part of coding within first 40mins, and spend the rest debugging and adding some part of the code
