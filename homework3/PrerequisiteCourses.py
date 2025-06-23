@@ -98,3 +98,7 @@ def main():
                
 if __name__ == '__main__':
     main()
+    
+# Time complexity - O(N + E)
+# Space complexity - O(N + E)
+# Time taken - ~ 1hr
